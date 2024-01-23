@@ -79,6 +79,8 @@ curl -X 'GET' \
 
 You are also provided 2 helper API-s to be able to set the states for the GET weather API
 
+Helper API-s don't need to be tested, they exist so you can set the states of the API under test
+
 #### PUT .../weather/temp
 
 You can set the Fahrenheit temperature with this API, by sending an Integer
@@ -116,7 +118,7 @@ using **Cucumber,** **testng** and **Selenium** where needed
     * Selenium
     * Maven and POM
     * BDD and Executed cucumber tests.
-    * Reporting framework of your choice.
+    * Add an external reporting framework of your choice. (eg.: Extent, Allure ...etc)
     * You can add any other helper library if you wish
 * Create a README file with some informative description of your project
     * Also include the results of the test report of your scenarios (in the readme)
