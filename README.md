@@ -113,6 +113,7 @@ curl -X 'PUT' \
 You need to create a test automation framework and implement test cases for the weather API (defined above)
 using **Cucumber,** **testng** and **Selenium** where needed
 * Define Cucumber scenarios
+    * In designing your cucumber scenarios, keep in mind that it should be understandable for someone without a technical expertise ( Eg.: Business representatives). Design them as you would have to demo it to business stakeholders
 * Use the following language, frameworks and technologies within the automation project:
     * Java
     * Selenium
