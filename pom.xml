@@ -8,11 +8,11 @@
         <version>3.2.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.udemy.spring</groupId>
-    <artifactId>spring-selenium</artifactId>
+    <groupId>com.viesure.coding.challenge.selenium.restassured</groupId>
+    <artifactId>spring-selenium-restassured</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-selenium</name>
-    <description>spring selenium framework</description>
+    <name>spring-selenium-restassured</name>
+    <description>spring selenium restassured framework</description>
 
     <properties>
         <java.version>17</java.version>
@@ -110,11 +110,6 @@
             <version>${selenium.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-        </dependency>
-        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>${cucumber.version}</version>
@@ -185,13 +180,6 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>${faker.verison}</version>
-
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

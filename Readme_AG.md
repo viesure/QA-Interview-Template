@@ -16,6 +16,9 @@
 ![CucumberReport][CucumberReport]
 ![ExtentReport][ExtentReport]
 ![RestAssured][RestAssured]
+![Hamcrest][Hamcrest]
+![Assertj][Assertj]
+![Lombok][Lombok]
 
 ## 🚀 Run Tests (test set runs with 2 threads parallel by default)
 
@@ -23,6 +26,7 @@
    1. mvn clean test -Dcucumber.filter.tags="@api"
    2. mvn clean test -Dcucumber.filter.tags="@ui" -Dbrowser=chrome
       1. to specify the browser use -Dbrowser=chrome, edge or firefox
+      2. to run in parallel: mvn clean test -Dcucumber.filter.tags="@ui" -Dbrowser=chrome -Ddataproviderthreadcount=2
 2. ___Remote Execution___: 
    1. mvn clean test -Dcucumber.filter.tags="@ui" -Dbrowser=chrome -Dspring.profiles.active=remote-with-local-grid-compose
       1. Requires docker. It utilizes spring-boot-docker-compose to spin up selenium grid using docker-compose:
@@ -87,3 +91,6 @@ but was: "The weather is "
 [Spring]: https://img.shields.io/badge/Spring-purple
 [CucumberReport]: https://img.shields.io/badge/Cucumber_Report-orange
 [ExtentReport]: https://img.shields.io/badge/Extent_Report-green
+[Hamcrest]: https://img.shields.io/badge/Hamcrest-192FT1
+[Assertj]: https://img.shields.io/badge/Assertj-122BE2
+[Lombok]: https://img.shields.io/badge/Lombok-8A2BE2
