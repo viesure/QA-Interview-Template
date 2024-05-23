@@ -31,7 +31,7 @@ The API will return the following fields: `city`, `condition`, `icon`, `descript
 * The **weather object** contains the temperature in both Fahrenheit and Celsius
     * The **tempInFahrenheit field** contains the current temperature in Fahrenheits
         * Should have 0 digits
-    * The **tempInCelsius field** contains the current remperature in Celsius
+    * The **tempInCelsius field** contains the current temperature in Celsius
         * Should have 0 digits
         * Calculated from the tempInFahrenheit field
         * Uses normal rounding rules
