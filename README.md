@@ -132,7 +132,7 @@ To also make use of selenium, test a few fields from `https://openweathermap.org
 #### Task1
 Verify the main page's search field contains correct placeholder text
 
-![Search](./resources/openweather_search_placeholder_autumn.png)
+![Search](./resources/openweather_search_placeholder_spring.png)
 
 #### Task2
 * Search for `Sydney`, and select `Sydney, AU` from the list
