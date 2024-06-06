@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "city": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "conditionId": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "weather": {
+      "type": "object",
+      "properties": {
+        "tempInFahrenheit": {
+          "type": "integer"
+        },
+        "tempInCelsius": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tempInFahrenheit",
+        "tempInCelsius"
+      ]
+    }
+  },
+  "required": [
+    "city",
+    "condition",
+    "icon",
+    "conditionId",
+    "description",
+    "weather"
+  ]
+}

@@ -1,0 +1,1531 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">May 21, 2024 05:18:04 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 21, 2024 05:18:04 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 21, 2024 05:18:21 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='47%'><b>9</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='52%'><b>10</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='84%'><b>75</b> steps passed</small></div>
+<div>
+<small data-tooltip='11%'><b>10</b> steps failed,
+<b>4</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Weather backend API endpoint":12.19
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@api</td>
+<td>9</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>47.368%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>SUT</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Attila Gyori</td>
+</tr>
+<tr>
+<td>build</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 9,
+failChild: 10,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 75,
+failGrandChild: 10,
+warningGrandChild: 0,
+skipGrandChild: 4,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@api</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Weather backend API endpoint</p>
+            <p class="text-sm">
+              <span>5:18:09 PM</span> / <span>00:00:12:190</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Weather backend API endpoint</h5>
+<span class='badge badge-success'>05.21.2024 5:18:09 PM</span>
+<span class='badge badge-danger'>05.21.2024 5:18:21 PM</span>
+<span class='badge badge-default'>00:00:12:190</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>api: /weather responses with correct fields and types</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.checkAPIAvailable(java.lang.String)">
+                <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.callAPIWithGET(java.lang.String)">
+                <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifySchema()">
+                <span>Then endpoint will send back a response with correct schema: city: string, condition: string, icon: string, description: string, conditionId: integer whole number, tempInFahrenheit: integer whole number and tempInCelsius: integer whole number</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: object has missing required properties (["conditionId"])
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/attil/AppData/Local/Temp/surefire1055614135377307937/..%5C..%5C..%5C..%5C..%5C..%5Cwork%5Cselenium%5Cselenium-java-spring-pom-cucumber_assignment%5Cassignement2%5CQA-Interview-Template%5Ctarget%5Ctest-classes/fixtures/api/weather-api-response-schema.json#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "required"
+    required: ["city","condition","conditionId","description","icon","weather"]
+    missing: ["conditionId"]
+
+  Actual: {"city":"vienna","condition":"dust","icon":"dust.png","description":"The weather is ","weather":{"tempInFahrenheit":68,"tempInCelsius":20}}
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifySchema(WeatherAPISteps.java:85)
+	at ✽.endpoint will send back a response with correct schema: city: string, condition: string, icon: string, description: string, conditionId: integer whole number, tempInFahrenheit: integer whole number and tempInCelsius: integer whole number(classpath:features/api/weather-backend-api.feature:10)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains condition with the relevant conditionID</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.checkAPIAvailable(java.lang.String)">
+                <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.callAPIWithGET(java.lang.String)">
+                <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyConditionsMap(io.cucumber.datatable.DataTable)">
+                <span>Then the conditionID field gives an ID of the current condition as follows:</span>
+      <div><table class='markup-table table '><tr><td>1</td><td>clear</td></tr><tr><td>2</td><td>windy</td></tr><tr><td>3</td><td>mist</td></tr><tr><td>4</td><td>drizzle</td></tr><tr><td>5</td><td>dust</td></tr></table>
+      </div>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.MultipleFailuresError: Verify conditionId field and the corresponding condition (2 failures)
+	org.opentest4j.AssertionFailedError: expected: not <null>
+	org.opentest4j.AssertionFailedError: expected: <Optional[5]> but was: <null>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyConditionsMap(WeatherAPISteps.java:128)
+	at ✽.the conditionID field gives an ID of the current condition as follows:(classpath:features/api/weather-backend-api.feature:16)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: not <null>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+		at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+		at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+		at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:304)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.lambda$verifyConditionsMap$5(WeatherAPISteps.java:129)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+		at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyConditionsMap(WeatherAPISteps.java:128)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+		at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+		at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+		at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+		at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+		at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+		at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+		at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+		at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+		at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+		at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+		at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+		at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+		at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+		at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+		at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+		at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+		at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+		at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+		at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+		at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+		at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <Optional[5]> but was: <null>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.lambda$verifyConditionsMap$6(WeatherAPISteps.java:130)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+		at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyConditionsMap(WeatherAPISteps.java:128)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+		at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+		at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+		at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+		at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+		at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+		at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+		at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+		at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+		at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+		at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+		at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+		at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+		at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+		at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+		at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+		at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+		at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+		at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+		at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+		at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+		at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing conditionId: 1 to endpoint: "/weather/condition"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains the corresponding "condition" with "clear"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="34"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing conditionId: 2 to endpoint: "/weather/condition"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains the corresponding "condition" with "windy"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing conditionId: 3 to endpoint: "/weather/condition"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains the corresponding "condition" with "mist"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="60"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing conditionId: 4 to endpoint: "/weather/condition"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains the corresponding "condition" with "drizzle"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
+JSON path icon doesn't match.
+Expected: drizzle.png
+  Actual: drizzle.jpeg
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyIconPropertyValue(WeatherAPISteps.java:140)
+	at ✽.the "condition" field value with ".png" makes up the "icon" field value(classpath:features/api/weather-backend-api.feature:28)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="73"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing conditionId: 5 to endpoint: "/weather/condition"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains the corresponding "condition" with "dust"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="86"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains 'icon' field with value: 'condition' field value with .png extension</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.checkAPIAvailable(java.lang.String)">
+                <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.callAPIWithGET(java.lang.String)">
+                <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyIconPropertyValue(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then the "condition" field value with ".png" makes up the "icon" field value</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains both tempInFahrenheit and tempInCelsius fields with correct exchange</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.checkAPIAvailable(java.lang.String)">
+                <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.callAPIWithGET(java.lang.String)">
+                <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTempField(java.lang.String)">
+                <span>Then the value of "tempInFahrenheit" field is a whole number with 0 digits</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTempField(java.lang.String)">
+                <span>And the value of "tempInCelsius" field is a whole number with 0 digits</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyFahrenheitToCelsiusConversion(java.lang.String,java.lang.String)">
+                <span>And the exchange of "tempInFahrenheit" to "tempInCelsius" is correct</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="108"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 0 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius <= 0": prefix: "The weather is" with weather condition: "freezing" as suffix determined by celsius: 0 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="122"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from -1 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius <= 0": prefix: "The weather is" with weather condition: "freezing" as suffix determined by celsius: -1 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="135"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 1 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 10": prefix: "The weather is" with weather condition: "cold" as suffix determined by celsius: 1 field</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: 
+expected: "The weather is cold"
+ but was: "The weather is freezing"
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyDescriptionText(WeatherAPISteps.java:168)
+	at ✽.the "description" field contains leading text by rule "celsius < 10": prefix: "The weather is" with weather condition: "cold" as suffix determined by celsius: 1 field(classpath:features/api/weather-backend-api.feature:55)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="148"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 9 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 10": prefix: "The weather is" with weather condition: "cold" as suffix determined by celsius: 9 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.MultipleFailuresError: Verify fields: tempInFahrenheit and tempInCelsius (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <8> but was: <9>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+	at ✽.the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"(classpath:features/api/weather-backend-api.feature:56)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <8> but was: <9>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:555)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.lambda$verifyTemperatures$1(WeatherAPISteps.java:110)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+		at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+		at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+		at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+		at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+		at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+		at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+		at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+		at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+		at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+		at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+		at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+		at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+		at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+		at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+		at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+		at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+		at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+		at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+		at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+		at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+		at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+		at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="161"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 10 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 20": prefix: "The weather is" with weather condition: "mild" as suffix determined by celsius: 10 field</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: 
+expected: "The weather is mild"
+ but was: "The weather is cold"
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyDescriptionText(WeatherAPISteps.java:168)
+	at ✽.the "description" field contains leading text by rule "celsius < 20": prefix: "The weather is" with weather condition: "mild" as suffix determined by celsius: 10 field(classpath:features/api/weather-backend-api.feature:55)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="174"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 19 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 20": prefix: "The weather is" with weather condition: "mild" as suffix determined by celsius: 19 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.MultipleFailuresError: Verify fields: tempInFahrenheit and tempInCelsius (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <18> but was: <19>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+	at ✽.the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"(classpath:features/api/weather-backend-api.feature:56)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <18> but was: <19>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:555)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.lambda$verifyTemperatures$1(WeatherAPISteps.java:110)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+		at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+		at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+		at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+		at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+		at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+		at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+		at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+		at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+		at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+		at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+		at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+		at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+		at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+		at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+		at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+		at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+		at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+		at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+		at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+		at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+		at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+		at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="187"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 20 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 20 field</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: 
+expected: "The weather is warm"
+ but was: "The weather is "
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyDescriptionText(WeatherAPISteps.java:168)
+	at ✽.the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 20 field(classpath:features/api/weather-backend-api.feature:55)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="200"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 24 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 24 field</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.AssertionFailedError: 
+expected: "The weather is warm"
+ but was: "The weather is "
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyDescriptionText(WeatherAPISteps.java:168)
+	at ✽.the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 24 field(classpath:features/api/weather-backend-api.feature:55)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="213"><span class="badge log pass-bg mr-2">Pass</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 25 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius >= 25": prefix: "The weather is" with weather condition: "hot" as suffix determined by celsius: 25 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="226"><span class="badge log fail-bg mr-2">Fail</span>/weather api GET response contains description field returning a description text of the current weather</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given an endpoint with relative path: "/weather" to fetch weather details</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user sends PUT request with payload containing "tempInFahrenheit": value from 26 converted to fahrenheit to endpoint: "/weather/temp"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user calls the endpoint: "/weather" with GET request</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the "description" field contains leading text by rule "celsius >= 25": prefix: "The weather is" with weather condition: "hot" as suffix determined by celsius: 26 field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+      <div>
+        <textarea disabled class="code-block">org.opentest4j.MultipleFailuresError: Verify fields: tempInFahrenheit and tempInCelsius (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <25> but was: <26>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+	at ✽.the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"(classpath:features/api/weather-backend-api.feature:56)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <25> but was: <26>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:555)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.lambda$verifyTemperatures$1(WeatherAPISteps.java:110)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1006)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+		at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+		at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+		at com.viesure.coding.challenge.selenium.bdd.steps.WeatherAPISteps.verifyTemperatures(WeatherAPISteps.java:108)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+		at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+		at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+		at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+		at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+		at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+		at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+		at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
+		at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
+		at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+		at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+		at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+		at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+		at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+		at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+		at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+		at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+		at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+		at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+		at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+		at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+		at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+		at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='7'>Then endpoint will send back a response with correct schema: city: string, condition: string, icon: string, description: string, conditionId: integer whole number, tempInFahrenheit: integer whole number and tempInCelsius: integer whole number</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint.api: /weather responses with correct fields and types.Then endpoint will send back a response with correct schema: city: string, condition: string, icon: string, description: string, conditionId: integer whole number, tempInFahrenheit: integer whole number and tempInCelsius: integer whole number</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='69'>Then the "condition" field value with ".png" makes up the "icon" field value</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains condition with the relevant 'conditionID' by active condition change with PUT.Then the "condition" field value with ".png" makes up the "icon" field value</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">org.opentest4j.MultipleFailuresError</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.opentest4j.MultipleFailuresError</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>Then the conditionID field gives an ID of the current condition as follows:</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains condition with the relevant conditionID.Then the conditionID field gives an ID of the current condition as follows:</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='157'>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='183'>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='235'>Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the response contains correct temperature values in both fields: "tempInFahrenheit" and "tempInCelsius"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">org.opentest4j.AssertionFailedError</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.opentest4j.AssertionFailedError</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='142'>Then the "description" field contains leading text by rule "celsius < 10": prefix: "The weather is" with weather condition: "cold" as suffix determined by celsius: 1 field</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the "description" field contains leading text by rule "celsius < 10": prefix: "The weather is" with weather condition: "cold" as suffix determined by celsius: 1 field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='168'>Then the "description" field contains leading text by rule "celsius < 20": prefix: "The weather is" with weather condition: "mild" as suffix determined by celsius: 10 field</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the "description" field contains leading text by rule "celsius < 20": prefix: "The weather is" with weather condition: "mild" as suffix determined by celsius: 10 field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='194'>Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 20 field</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 20 field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:18:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='207'>Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 24 field</a>
+<div class="">
+<span class="badge badge-default">Weather backend API endpoint./weather api GET response contains description field returning a description text of the current weather.Then the "description" field contains leading text by rule "celsius < 25": prefix: "The weather is" with weather condition: "warm" as suffix determined by celsius: 24 field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
